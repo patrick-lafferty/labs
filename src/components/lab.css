@@ -1,0 +1,17 @@
+.primaryContent {
+    height: 10rem;
+    background: white;
+}
+
+.secondaryContent {
+    background: var(--secondary-colour);
+    color: var(--secondary-text);
+    margin: 0rem;
+    font-family: "Oswald";
+    font-size: 1.8rem;
+    padding: 0.7rem 1.5rem;
+}
+
+.tile {
+    width: 20rem;
+}

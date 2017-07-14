@@ -1,0 +1,12 @@
+:global(:root) {
+
+    --primary-colour: #03a9f4;
+    --primary-light: #67daff;
+    --primary-dark: #007ac1;
+    --primary-text: #000000;
+
+    --secondary-colour: #5e35b1;
+    --secondary-light: #9162e4;
+    --secondary-dark: #280680;
+    --secondary-text: #ffffff;
+}

@@ -1,3 +1,13 @@
 .grid {
     display: grid;
+    background: var(--primary-colour);
+    padding: 2rem;
+    margin: auto;
+    width: 80%;
+
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-auto-rows: auto;
+
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
 }
