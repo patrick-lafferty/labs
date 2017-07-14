@@ -3,6 +3,10 @@ const styles = require<any>("./lab.css");
 
 export interface LabProps {name: string};
 
+/*
+A lab component is a tile that previews a webapp with a heading and image,
+to be added to a grid component
+*/
 export class Lab extends React.Component<LabProps, any> {
     render() {
         return (
