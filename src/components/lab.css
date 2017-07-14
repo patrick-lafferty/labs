@@ -14,4 +14,5 @@
 
 .tile {
     width: 20rem;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.25);
 }

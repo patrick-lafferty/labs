@@ -15,7 +15,7 @@ export class App extends React.Component<any, any> {
         return (
             <div>
                 <div className={styles.toolbar}>
-                    <h1 className={styles.name}>Labs</h1>
+                    <h1 className={styles.name}>Web Tech Labs</h1>
                 </div>
                 <Grid children={children}/>
             </div>
