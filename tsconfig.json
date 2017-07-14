@@ -4,6 +4,7 @@
         "sourceMap": true,
         "module": "es6",
         "target": "es5",
+        "lib": ["dom", "es6"],
         "jsx": "react",
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
