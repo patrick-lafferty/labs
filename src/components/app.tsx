@@ -1,3 +1,22 @@
+/*
+MIT License
+Copyright (c) 2017 Patrick Lafferty
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
 import * as React from "react";
 import {LabCard} from "./labcard";
 import {Browser} from "./browser";
@@ -102,10 +121,16 @@ export class App extends React.Component<AppProps, any> {
             let labRoute = "", className = styles.offscreenApp;
             
             if (this.state.route == "") {
+                /*
+                we went from a lab back to the main screen
+                */
                 labRoute = this.state.previous;
                 className = styles.onscreenApp;
             }
             else {
+                /*
+                we went from the main screen to a lab
+                */
                 labRoute = this.state.route;
             }
 
@@ -115,12 +140,22 @@ export class App extends React.Component<AppProps, any> {
 
             if (this.labRoutes.has(labRoute)) {
                 const route = this.labRoutes.get(labRoute);
+                /*
+                component needs to be capitalized in order to use it in the following statement
+                see https://facebook.github.io/react/docs/jsx-in-depth.html#choosing-the-type-at-runtime
+                */
                 let Component = route!.component;
-                content = <LabViewer name={route!.name} lab={<Component />}/>;
+                let viewer = <LabViewer name={route!.name} lab={<Component />}/>;
+
+                /*
+                content will be a flexbox with twice the width of the screen,
+                with the browser and viewer both taking up half of it,
+                with an animation moving between the two
+                */
                 content = 
                     <div className={className}> 
                         <Browser offscreen={true} children={this.tiles}/>
-                        {content}
+                        {viewer}
                     </div>;
             }
         }
