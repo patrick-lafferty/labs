@@ -18,34 +18,23 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 import * as React from "react";
-import {TabControl} from "../../common/tabcontrol";
-import {Intro} from "./intro";
-import {Basics} from "./basics";
-import {References} from "./references";
+const styles = require<any>("../../common/tabcontrol.css");
 
-/*
-The GridLab demonstrates different properties and uses of CSS Grid
-*/
-export class GridLab extends React.Component<any, any>  {
-
-    constructor(props: any) {
-        super(props); 
-
-        this.state = {
-            contents: new Map<string, JSX.Element>([
-                ["Intro", <Intro />],
-                ["Basics", <Basics />],
-                ["References", <References />]
-            ])
-        };
-    }
-    
+export class Intro extends React.Component<any, any> {
     render() {
-
         return (
-            <article>
-                <TabControl contents={this.state.contents}/>
-            </article>
+            <section className={styles.tabContent}>
+                CSS Grid Layout is a flexible layout system that allows you to arrange
+                content into rows and columns. At first that might sound like tables, 
+                but grid is so much more. With grid you can separate the content from
+                the layout. You define row and column lines in CSS as opposed to hardcoding
+                your content inside <code>&lt;tr&gt;</code> and <code>&lt;td&gt;</code>s.
+                This means using media queries you can change how the rows and columns
+                are defined, without changing the actual content. This page is an example:
+                for small screen widths the grid has just one column so the tabs are displayed
+                horizontally on the first row, for larger screens they're displayed vertically
+                in the leftmost column.
+            </section>
         );
     }
 }

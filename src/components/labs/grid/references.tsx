@@ -18,34 +18,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 import * as React from "react";
-import {TabControl} from "../../common/tabcontrol";
-import {Intro} from "./intro";
-import {Basics} from "./basics";
-import {References} from "./references";
+const styles = require<any>("../../common/tabcontrol.css");
 
-/*
-The GridLab demonstrates different properties and uses of CSS Grid
-*/
-export class GridLab extends React.Component<any, any>  {
-
-    constructor(props: any) {
-        super(props); 
-
-        this.state = {
-            contents: new Map<string, JSX.Element>([
-                ["Intro", <Intro />],
-                ["Basics", <Basics />],
-                ["References", <References />]
-            ])
-        };
-    }
-    
+export class References extends React.Component<any, any> {
     render() {
-
         return (
-            <article>
-                <TabControl contents={this.state.contents}/>
-            </article>
+            <section className={styles.tabContent}>
+                References ...
+            </section>
         );
     }
 }
