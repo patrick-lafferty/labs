@@ -30,3 +30,19 @@ SOFTWARE.
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
 }
+
+@media (max-width: 400px) {
+    .grid {
+        width: 90%;
+        padding: 0rem;
+
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    }
+}

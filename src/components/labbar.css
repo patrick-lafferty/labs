@@ -33,12 +33,24 @@ SOFTWARE.
 .name {
     color: var(--secondary-text);
     font-family: "Oswald";
-    font-size: 4rem;
+    font-size: 4em;
     margin: 0rem;
 }
 
 .labsBreadcrumb {
     composes: name;
     padding-left: 2rem;
-    font-size: 3rem;
+    font-size: 3em;
+}
+
+@media (max-width: 360px) {
+    .toolbar {
+        width: 90%;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 640px) {
+    .toolbar {
+        width: 70%;
+    }
 }

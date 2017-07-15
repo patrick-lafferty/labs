@@ -21,5 +21,18 @@ body {
     margin: 0rem;
     width: 100%;
     background: var(--primary-colour);
-    overflow: hidden;
+    overflow-x: hidden;
+    font-size: 1em;
+}
+
+@media (max-width: 360px) {
+    body {
+        font-size: 0.5em;
+    }
+}
+
+@media (min-width: 361px) and (max-width: 640px) {
+    body {
+        font-size: 0.75em;
+    }
 }

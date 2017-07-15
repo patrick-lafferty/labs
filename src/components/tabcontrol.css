@@ -18,8 +18,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 .tab {
-    padding: 1rem;
-    margin: 0.5rem 0rem;
+    padding: 1em;
+    margin: 0.5em 0em;
 }
 
 .tabBlock {
@@ -40,4 +40,29 @@ SOFTWARE.
 
 .tabContent {
     background: white;
+}
+
+@media (max-width: 640px) {
+    .tabBlock {
+        flex-direction: row;
+    }
+
+    .tabControl {
+        width: 95%;
+        padding: unset;
+        grid-template-rows: auto 1fr;
+        grid-row-gap: 1.5rem;
+        grid-template-columns: unset;
+        grid-column-gap: unset;
+    }
+}
+
+@media (max-width: 360px) {
+    .tab {
+        margin: 0.5em 0.2em;
+    }
+
+    .tabControl {
+        padding: 0rem;
+    }
 }

@@ -33,6 +33,13 @@ SOFTWARE.
     margin: 0rem;
 }
 
+@media (max-width: 400px) {
+    .name {
+        font-size: 2rem;
+    }
+
+}
+
 .offscreenApp {
     flex-wrap: nowrap;
     display: flex;

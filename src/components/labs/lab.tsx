@@ -17,52 +17,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
-import * as React from "react";
-import {TabControl} from "../tabcontrol";
+/*import * as React from "react";
 
-const styles = require<any>("../tabcontrol.css");
-
-/*
-The GridLab demonstrates different properties and uses of CSS Grid
-*/
-export class GridLab extends React.Component<any, any>  {
-
-    constructor(props: any) {
-        super(props); 
-
-        let intro = (
-            <section className={styles.tabContent}>
-                Intro ...
-            </section>
-        );
-
-        let basics = (
-            <section className={styles.tabContent}>
-                Basic example ...
-            </section>
-        );
-
-        let references = (
-            <section className={styles.tabContent}>
-                References ...
-            </section>
-        );
-            
-        this.state = {
-            contents: new Map<string, JSX.Element>([
-                ["Intro", intro],
-                ["Basics", basics],
-                ["References", references]
-            ])
-        };
-    }
-    
+export class Lab extends React.Component<any, any> {
     render() {
-
         return (
-            <article>
-                <TabControl contents={this.state.contents}/>
-            </article>
+
         );
     }
-}
+}*/
