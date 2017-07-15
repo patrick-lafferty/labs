@@ -21,9 +21,39 @@ import * as React from "react";
 const styles = require<any>("./tabcontrol.css");
 
 class Tab extends React.Component<any, any> {
+    constructor(props: any) {
+        super(props);
+
+        this.state = {
+            clicked: false
+        };
+    }
+
+    mouseDown = () => {
+        this.setState({clicked: true});
+    };
+
+    animationEnd = () => {
+        this.setState({clicked: false});
+    };
+
     render() {
+        let className = "";
+
+        if (this.state.clicked) {
+            className = styles.clickedTab;
+        }
+        else {
+            className = styles.tab;
+        }
+
         return (
-            <button className={styles.tab} data-tab-name={this.props.name}>{this.props.name}</button>
+            <button onMouseDown={this.mouseDown}
+                    onAnimationEnd={this.animationEnd}
+                    className={className}
+                    data-tab-name={this.props.name}>
+                {this.props.name}
+            </button>
         );     
     }
 }

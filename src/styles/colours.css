@@ -28,4 +28,16 @@ SOFTWARE.
     --secondary-light: #9162e4;
     --secondary-dark: #280680;
     --secondary-text: #ffffff;
+
+    /*
+    Occasionally we want to change the alpha of the above colours.
+    Since you can't do rgba(#aaaaaa, alpha), the workaround is to store
+    the triplet in another variable.
+
+    See https://stackoverflow.com/questions/40010597/how-do-i-apply-opacity-to-a-css-color-variable
+    */
+    --secondary-colour-rgb: 94, 53, 177;
+    --secondary-light-rgb: 145, 98, 228;
+    --secondary-dark-rgb: 40, 6, 128;
+    
 }
