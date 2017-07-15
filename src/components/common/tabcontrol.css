@@ -19,11 +19,11 @@ SOFTWARE.
 */
 
 .tab {
-    composes: button from "../styles/button.css";
+    composes: button from "../../styles/button.css";
 }
 
 .clickedTab {
-    composes: clickedButton from "../styles/button.css";
+    composes: clickedButton from "../../styles/button.css";
 }
 
 .tabBlock {

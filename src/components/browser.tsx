@@ -19,7 +19,7 @@ SOFTWARE.
 */
 import * as React from "react";
 import {AppBar} from "./appbar";
-import { Grid } from "./grid";
+import { Grid } from "./common/grid";
 
 const styles = require<any>("./browser.css");
 export interface BrowserProps {offscreen: boolean, children: JSX.Element[]};

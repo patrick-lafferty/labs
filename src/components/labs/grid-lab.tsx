@@ -18,9 +18,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 import * as React from "react";
-import {TabControl} from "../tabcontrol";
+import {TabControl} from "../common/tabcontrol";
 
-const styles = require<any>("../tabcontrol.css");
+const styles = require<any>("../common/tabcontrol.css");
 
 /*
 The GridLab demonstrates different properties and uses of CSS Grid
