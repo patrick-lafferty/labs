@@ -13,3 +13,46 @@
     font-size: 4rem;
     margin: 0rem;
 }
+
+.offscreenApp {
+    flex-wrap: nowrap;
+    display: flex;
+    width: 200%;
+
+    animation-name: slideOut;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.directOffscreenApp {
+    composes: offscreenApp;
+    animation-duration: 0s;
+}
+
+.onscreenApp {
+    composes: offscreenApp;
+    
+    animation-name: slideIn;
+    animation-duration: 1s;
+}
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}

@@ -8,7 +8,7 @@ export class LabBar extends React.Component<LabBarProps, any> {
         return (
             <header className={styles.header}>
                 <div className={styles.toolbar}>
-                    <a href="#" className={styles.labsBreadcrumb}>Labs ></a>
+                    <button className={styles.labsBreadcrumb}>Labs ></button>
                     <h1 className={styles.name}>{this.props.name} Lab</h1>
                 </div>
             </header>
