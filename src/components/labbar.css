@@ -43,6 +43,7 @@ SOFTWARE.
     font-size: 3em;
 }
 
+
 @media (max-width: 360px) {
     .toolbar {
         width: 90%;

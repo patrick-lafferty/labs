@@ -18,13 +18,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-.tab {
-    composes: button from "../../styles/button.css";
+/*.tab {
+    composes: button from "./button.css";
 }
 
 .clickedTab {
-    composes: clickedButton from "../../styles/button.css";
-}
+    composes: clickedButton from "./button.css";
+}*/
 
 .tabBlock {
     display: flex;

@@ -18,45 +18,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 import * as React from "react";
+import {Button} from "./button";
 const styles = require<any>("./tabcontrol.css");
 
-class Tab extends React.Component<any, any> {
-    constructor(props: any) {
-        super(props);
-
-        this.state = {
-            clicked: false
-        };
-    }
-
-    mouseDown = () => {
-        this.setState({clicked: true});
-    };
-
-    animationEnd = () => {
-        this.setState({clicked: false});
-    };
-
-    render() {
-        let className = "";
-
-        if (this.state.clicked) {
-            className = styles.clickedTab;
-        }
-        else {
-            className = styles.tab;
-        }
-
-        return (
-            <button onMouseDown={this.mouseDown}
-                    onAnimationEnd={this.animationEnd}
-                    className={className}
-                    data-tab-name={this.props.name}>
-                {this.props.name}
-            </button>
-        );     
-    }
-}
 
 /*
 The TabControl has a column of buttons("tabs") and a content area
@@ -96,7 +60,7 @@ export class TabControl extends React.Component<TabControlProps, TabControlState
     };
 
     render() {
-        let tabs = this.state.tabs.map(name => <Tab key={name} name={name}/>);
+        let tabs = this.state.tabs.map(name => <Button key={name} name={name}/>);
         let content = this.props.contents.get(this.state.content);
 
         return (

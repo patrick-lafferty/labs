@@ -25,7 +25,7 @@ import {LabViewer} from "./labviewer";
 const styles = require<any>("./app.css");
 
 //labs
-import {GridLab} from './labs/grid-lab';
+import {GridLab} from './labs/grid/grid-lab';
 
 /*
 A route maps the hash part of a url to a component type to render
@@ -104,7 +104,8 @@ export class App extends React.Component<AppProps, any> {
         /*
         otherwise if the click was on the "Labs >" in the top left corner on 
         the app bar we want to go back*/
-        else if (el.className.includes("labsBreadcrumb")) {
+        else if ("tabName" in el.dataset && el.dataset.tabName == "Labs >") {
+
             window.history.pushState({}, "", "");
             this.setState({route: "", previous: this.state.route, direct: false});
         }

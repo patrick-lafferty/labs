@@ -18,6 +18,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 import * as React from "react";
+import {Button} from "./common/button";
 const styles = require<any>("./labbar.css");
 
 export interface LabBarProps {name: string};
@@ -28,11 +29,12 @@ a button "Lab >" that goes back to the main screen
 */
 
 export class LabBar extends React.Component<LabBarProps, any> {
+    //<button className={styles.labsBreadcrumb}>Labs ></button>
     render() {
         return (
             <header className={styles.header}>
                 <div className={styles.toolbar}>
-                    <button className={styles.labsBreadcrumb}>Labs ></button>
+                    <Button name="Labs >" />
                     <h1 className={styles.name}>{this.props.name} Lab</h1>
                 </div>
             </header>
