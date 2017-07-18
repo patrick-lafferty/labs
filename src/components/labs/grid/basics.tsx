@@ -24,7 +24,7 @@ export class Basics extends React.Component<any, any> {
     render() {
         return (
             <section className={styles.tabContent}>
-                <p>This is a basic grid example with various coloured divs. 
+                <p className={styles.noMargin}>This is a basic grid example with various coloured divs. 
                     The blue div spans 3 columns, the green div spans an 
                     area of 2x2 cells, the red div spans 2 rows, and the 
                     remaining divs are the same size. 

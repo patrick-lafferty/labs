@@ -24,13 +24,13 @@ export class References extends React.Component<any, any> {
     render() {
         return (
             <section className={styles.tabContent}>
-                The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozilla Developer Network</a> 
+                <p className={styles.noMargin}>The <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">Mozilla Developer Network</a> 
                 is my go-to place for CSS docs. The link has a good reference and 11 guides on different
                 grid aspects.
 
                 <br />
                 The <a href="https://drafts.csswg.org/css-grid/">Grid Layout Spec</a> is also a great
-                reference.
+                reference.</p>
             </section>
         );
     }

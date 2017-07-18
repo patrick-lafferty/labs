@@ -35,6 +35,10 @@ SOFTWARE.
     grid-column-gap: 1.5rem;
 }
 
+.noMargin {
+    margin-top: 0rem;
+}
+
 .tabContent {
     background: white;
     font-family: "Exo 2";

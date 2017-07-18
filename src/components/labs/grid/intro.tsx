@@ -24,7 +24,7 @@ export class Intro extends React.Component<any, any> {
     render() {
         return (
             <section className={styles.tabContent}>
-                CSS Grid Layout is a flexible layout system that allows you to arrange
+                <p className={styles.noMargin}>CSS Grid Layout is a flexible layout system that allows you to arrange
                 content into rows and columns. At first that might sound like tables, 
                 but grid is so much more. With grid you can separate the content from
                 the layout. You define row and column lines in CSS as opposed to hardcoding
@@ -38,7 +38,7 @@ export class Intro extends React.Component<any, any> {
                 Grid offers even more than that. With the new unit <code>fr</code> you can define
                 proportional sizes. You can easily set gaps between rows and columns with
                 <code>grid-row-gap</code> and <code>grid-column-gap</code>. You can have
-                elements span multiple rows and columns.
+                elements span multiple rows and columns.</p>
             </section>
         );
     }

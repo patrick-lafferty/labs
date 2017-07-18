@@ -24,6 +24,10 @@ SOFTWARE.
     flex-direction: column;
 }
 
+.noMargin {
+    composes: noMargin from "../../common/tabcontrol.css";
+}
+
 .demoGrid {
     display: grid;
     height: 100%;
