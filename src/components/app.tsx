@@ -77,11 +77,9 @@ export class App extends React.Component<AppProps, any> {
 
         this.labRoutes = new Map<string, Route>([
             ["Grid", {name: "Grid", component: GridLab}], 
-            ["Two", {name: "Two", component: GridLab}], 
         ]);
 
         this.tiles = [
-            <LabCard key="Two" name="Two" route="Two"/>,
             <LabCard key="Grid" name="Grid" route="Grid"/>];
     }
 

@@ -514,10 +514,30 @@ function updateLink (link, options, obj) {
 /* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.tabcontrol__tabBlock__2q9skyIb2A {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.tabcontrol__tabControl__1VejW7jce4 {\r\n    display: grid;\r\n    width: 80%;\r\n    height:100%;\r\n    margin: auto;\r\n    padding: 2rem;\r\n\r\n    grid-template-columns: auto 1fr;\r\n\r\n    grid-column-gap: 1.5rem;\r\n}\r\n\r\n.tabcontrol__noMargin__1V5vRfArSL {\r\n    margin-top: 0rem;\r\n}\r\n\r\n.tabcontrol__tabContent__rYKxH_5iYl {\r\n    background: white;\r\n    font-family: \"Exo 2\";\r\n    padding: 1.5rem;\r\n    border-radius: 2px;\r\n    line-height: 1.62em;\r\n    height: 100%;\r\n}\r\n\r\n@media (max-width: 640px) {\r\n    .tabcontrol__tab__2zsLYYxWcX {\r\n        margin: 0.5em 0.5em 0em 0em;\r\n        box-shadow: 0px 3px 3px rgba(0,0,0,0.25);\r\n    }\r\n\r\n    .tabcontrol__tabBlock__2q9skyIb2A {\r\n        flex-direction: row;\r\n    }\r\n\r\n    .tabcontrol__tabControl__1VejW7jce4 {\r\n        width: 95%;\r\n        padding: unset;\r\n        grid-template-rows: auto 1fr;\r\n        grid-row-gap: 1.5rem;\r\n        grid-template-columns: unset;\r\n        grid-column-gap: unset;\r\n    }\r\n}\r\n\r\n@media (max-width: 360px) {\r\n    .tabcontrol__tab__2zsLYYxWcX {\r\n        margin: 0.5em 0.2em 0em 0em;\r\n    }\r\n\r\n    .tabcontrol__tabControl__1VejW7jce4 {\r\n        padding: 0rem;\r\n    }\r\n}", ""]);
+
+// exports
+exports.locals = {
+	"tabBlock": "tabcontrol__tabBlock__2q9skyIb2A",
+	"tabControl": "tabcontrol__tabControl__1VejW7jce4",
+	"noMargin": "tabcontrol__noMargin__1V5vRfArSL",
+	"tabContent": "tabcontrol__tabContent__rYKxH_5iYl",
+	"tab": "tabcontrol__tab__2zsLYYxWcX"
+};
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(4);
+var content = __webpack_require__(3);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -540,25 +560,6 @@ if(false) {
 	// When the module is disposed, remove the <style> tags
 	module.hot.dispose(function() { update(); });
 }
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.tabcontrol__tabBlock__2q9skyIb2A {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.tabcontrol__tabControl__1VejW7jce4 {\r\n    display: grid;\r\n    width: 80%;\r\n    height:100%;\r\n    margin: auto;\r\n    padding: 2rem;\r\n\r\n    grid-template-columns: auto 1fr;\r\n\r\n    grid-column-gap: 1.5rem;\r\n}\r\n\r\n.tabcontrol__tabContent__rYKxH_5iYl {\r\n    background: white;\r\n    font-family: \"Exo 2\";\r\n    padding: 1.5rem;\r\n    border-radius: 2px;\r\n    line-height: 1.62em;\r\n    height: 100%;\r\n}\r\n\r\n@media (max-width: 640px) {\r\n    .tabcontrol__tab__2zsLYYxWcX {\r\n        margin: 0.5em 0.5em 0em 0em;\r\n        box-shadow: 0px 3px 3px rgba(0,0,0,0.25);\r\n    }\r\n\r\n    .tabcontrol__tabBlock__2q9skyIb2A {\r\n        flex-direction: row;\r\n    }\r\n\r\n    .tabcontrol__tabControl__1VejW7jce4 {\r\n        width: 95%;\r\n        padding: unset;\r\n        grid-template-rows: auto 1fr;\r\n        grid-row-gap: 1.5rem;\r\n        grid-template-columns: unset;\r\n        grid-column-gap: unset;\r\n    }\r\n}\r\n\r\n@media (max-width: 360px) {\r\n    .tabcontrol__tab__2zsLYYxWcX {\r\n        margin: 0.5em 0.2em 0em 0em;\r\n    }\r\n\r\n    .tabcontrol__tabControl__1VejW7jce4 {\r\n        padding: 0rem;\r\n    }\r\n}", ""]);
-
-// exports
-exports.locals = {
-	"tabBlock": "tabcontrol__tabBlock__2q9skyIb2A",
-	"tabControl": "tabcontrol__tabControl__1VejW7jce4",
-	"tabContent": "tabcontrol__tabContent__rYKxH_5iYl",
-	"tab": "tabcontrol__tab__2zsLYYxWcX"
-};
 
 /***/ }),
 /* 5 */
@@ -798,10 +799,8 @@ var App = (function (_super) {
         window.onpopstate = _this.stateChanged;
         _this.labRoutes = new Map([
             ["Grid", { name: "Grid", component: __WEBPACK_IMPORTED_MODULE_4__labs_grid_grid_lab__["a" /* GridLab */] }],
-            ["Two", { name: "Two", component: __WEBPACK_IMPORTED_MODULE_4__labs_grid_grid_lab__["a" /* GridLab */] }],
         ]);
         _this.tiles = [
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Two", name: "Two", route: "Two" }),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Grid", name: "Grid", route: "Grid" })
         ];
         return _this;
@@ -1520,7 +1519,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.button__button__22NBhTkp4p {\r\n    padding: 1em;\r\n    margin: 0.5em 0em;\r\n    z-index: 1;\r\n\r\n    border-radius: 2px;\r\n    border: none;\r\n    background: var(--secondary-colour);\r\n    color: var(--secondary-text);\r\n    \r\n    text-transform: uppercase;\r\n    font-family: \"Exo 2\";\r\n    \r\n    overflow: hidden;\r\n}\r\n\r\n.button__clickedButton__3P3jbaZ9Be {\r\n\r\n    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);\r\n\r\n    animation-name: button__secondaryEffect__1Y_MHlL4U4;\r\n    animation-duration: 0.35s;\r\n\r\n    position: relative;\r\n}\r\n\r\n.button__clickedButton__3P3jbaZ9Be::before {\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 25%;\r\n    position: absolute;\r\n    width: 50%;\r\n    z-index: -1;\r\n\r\n    content: \"\";\r\n    \r\n    opacity: 0;\r\n    border-radius: 100%;\r\n    background-image: radial-gradient(circle at center,\r\n                rgba(var(--secondary-dark-rgb), 0.5) 0, \r\n                rgba(var(--secondary-dark-rgb), 0.5) 60%, \r\n                rgba(var(--secondary-colour-rgb), 0.3));\r\n\r\n    animation-name: button__primaryEffect__34jYFBGMS9;\r\n    animation-duration: 0.35s;\r\n    animation-fill-mode: forwards;\r\n}\r\n\r\n/*\r\nChanges the background colour of the button from light\r\nto dark and back, only visible from the left and right sides\r\nsince the primary effect covers it\r\n*/\r\n@keyframes button__secondaryEffect__1Y_MHlL4U4 {\r\n    0% {\r\n        background: var(--secondary-colour);\r\n    }\r\n    50% {\r\n        background: rgba(var(--secondary-dark-rgb), 0.8);\r\n    }\r\n    100% {\r\n        background: var(--secondary-colour);\r\n    }\r\n}\r\n\r\n/*\r\na radial gradient that grows and flashes from fully\r\ntransparent to opaque and back again\r\n*/\r\n@keyframes button__primaryEffect__34jYFBGMS9 {\r\n    0% {\r\n        opacity: 0;\r\n        transform: scale(1, 1);\r\n    }\r\n    50% {\r\n        opacity: 1;\r\n    }\r\n    100% {\r\n        opacity: 0;\r\n        transform: scale(1.7, 1.7);\r\n    }\r\n}", ""]);
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.button__button__22NBhTkp4p {\r\n    padding: 1em;\r\n    margin: 0.5em 0em;\r\n    z-index: 1;\r\n\r\n    border-radius: 2px;\r\n    border: none;\r\n    background: var(--secondary-colour);\r\n    color: var(--secondary-text);\r\n    \r\n    text-transform: uppercase;\r\n    font-family: \"Exo 2\";\r\n    \r\n    overflow: hidden;\r\n}\r\n\r\n@media (max-width: 640px) {\r\n    .button__button__22NBhTkp4p {\r\n        margin: 0em 0.5em;\r\n    }\r\n}\r\n\r\n.button__clickedButton__3P3jbaZ9Be {\r\n\r\n    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);\r\n\r\n    animation-name: button__secondaryEffect__1Y_MHlL4U4;\r\n    animation-duration: 0.35s;\r\n\r\n    position: relative;\r\n}\r\n\r\n.button__clickedButton__3P3jbaZ9Be::before {\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 25%;\r\n    position: absolute;\r\n    width: 50%;\r\n    z-index: -1;\r\n\r\n    content: \"\";\r\n    \r\n    opacity: 0;\r\n    border-radius: 100%;\r\n    background-image: radial-gradient(circle at center,\r\n                rgba(var(--secondary-dark-rgb), 0.5) 0, \r\n                rgba(var(--secondary-dark-rgb), 0.5) 60%, \r\n                rgba(var(--secondary-colour-rgb), 0.3));\r\n\r\n    animation-name: button__primaryEffect__34jYFBGMS9;\r\n    animation-duration: 0.35s;\r\n    animation-fill-mode: forwards;\r\n}\r\n\r\n/*\r\nChanges the background colour of the button from light\r\nto dark and back, only visible from the left and right sides\r\nsince the primary effect covers it\r\n*/\r\n@keyframes button__secondaryEffect__1Y_MHlL4U4 {\r\n    0% {\r\n        background: var(--secondary-colour);\r\n    }\r\n    50% {\r\n        background: rgba(var(--secondary-dark-rgb), 0.8);\r\n    }\r\n    100% {\r\n        background: var(--secondary-colour);\r\n    }\r\n}\r\n\r\n/*\r\na radial gradient that grows and flashes from fully\r\ntransparent to opaque and back again\r\n*/\r\n@keyframes button__primaryEffect__34jYFBGMS9 {\r\n    0% {\r\n        opacity: 0;\r\n        transform: scale(1, 1);\r\n    }\r\n    50% {\r\n        opacity: 1;\r\n    }\r\n    100% {\r\n        opacity: 0;\r\n        transform: scale(1.7, 1.7);\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -1739,7 +1738,7 @@ SOFTWARE.
 */
 
 
-var styles = __webpack_require__(3);
+var styles = __webpack_require__(4);
 ;
 ;
 var TabControl = (function (_super) {
@@ -1815,7 +1814,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var styles = __webpack_require__(3);
+var styles = __webpack_require__(4);
 var Intro = (function (_super) {
     __extends(Intro, _super);
     function Intro() {
@@ -1823,17 +1822,18 @@ var Intro = (function (_super) {
     }
     Intro.prototype.render = function () {
         return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabContent },
-            "CSS Grid Layout is a flexible layout system that allows you to arrange content into rows and columns. At first that might sound like tables, but grid is so much more. With grid you can separate the content from the layout. You define row and column lines in CSS as opposed to hardcoding your content inside ",
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "<tr>"),
-            " and ",
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "<td>"),
-            "s. This means using media queries you can change how the rows and columns are defined, without changing the actual content. This page is an example: for small screen widths the grid has just one column so the tabs are displayed horizontally on the first row, for larger screens they're displayed vertically in the leftmost column. Grid offers even more than that. With the new unit ",
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "fr"),
-            " you can define proportional sizes. You can easily set gaps between rows and columns with",
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "grid-row-gap"),
-            " and ",
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "grid-column-gap"),
-            ". You can have elements span multiple rows and columns."));
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { className: styles.noMargin },
+                "CSS Grid Layout is a flexible layout system that allows you to arrange content into rows and columns. At first that might sound like tables, but grid is so much more. With grid you can separate the content from the layout. You define row and column lines in CSS as opposed to hardcoding your content inside ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "<tr>"),
+                " and ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "<td>"),
+                "s. This means using media queries you can change how the rows and columns are defined, without changing the actual content. This page is an example: for small screen widths the grid has just one column so the tabs are displayed horizontally on the first row, for larger screens they're displayed vertically in the leftmost column. Grid offers even more than that. With the new unit ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "fr"),
+                " you can define proportional sizes. You can easily set gaps between rows and columns with",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "grid-row-gap"),
+                " and ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("code", null, "grid-column-gap"),
+                ". You can have elements span multiple rows and columns.")));
     };
     return Intro;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
@@ -1886,7 +1886,7 @@ var Basics = (function (_super) {
     }
     Basics.prototype.render = function () {
         return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabContent },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "This is a basic grid example with various coloured divs. The blue div spans 3 columns, the green div spans an area of 2x2 cells, the red div spans 2 rows, and the remaining divs are the same size. If you are using Firefox, try inspecting the grid below. In the \"display: grid\" property there is a # symbol between display and grid. Click on it to see the gridlines and try changing the grid-row/grid-column/grid-area values of the divs."),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { className: styles.noMargin }, "This is a basic grid example with various coloured divs. The blue div spans 3 columns, the green div spans an area of 2x2 cells, the red div spans 2 rows, and the remaining divs are the same size. If you are using Firefox, try inspecting the grid below. In the \"display: grid\" property there is a # symbol between display and grid. Click on it to see the gridlines and try changing the grid-row/grid-column/grid-area values of the divs."),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.demoGrid },
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile0 }),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile1 }),
@@ -1937,14 +1937,15 @@ if(false) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
 // imports
-exports.i(__webpack_require__(4), undefined);
+exports.i(__webpack_require__(3), undefined);
 
 // module
-exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.basics__tabContent__251J0Q7WkV {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.basics__demoGrid__3eiJyTRGxX {\r\n    display: grid;\r\n    height: 100%;\r\n\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-row-gap: 1em;\r\n    grid-column-gap: 1em;\r\n}\r\n\r\n.basics__tile__2GtXq8fGh2 {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.basics__tile0__3PKRlfq1j_ {\r\n    background: blue;\r\n    grid-column: 1/4;\r\n}\r\n\r\n.basics__tile1__2bDlgykFOz {\r\n    background: red;\r\n    grid-row: 1/3;\r\n    grid-column: 4/5;\r\n}\r\n\r\n.basics__tile2__LOB80elyYW {\r\n    background: green;\r\n    grid-area: 2/1/4/3;\r\n}\r\n\r\n.basics__tile3__1ELCx9UIeH {\r\n    background: yellow;\r\n}\r\n\r\n.basics__tile4__2Xfn3sulRA {\r\n    background: purple;\r\n}\r\n\r\n.basics__tile5__1UqyDVA8Fw {\r\n    background: orange;\r\n}\r\n\r\n.basics__tile6__IBRGjx38gM {\r\n    background: brown;\r\n}\r\n\r\n.basics__tile7__30Jdf9A73u {\r\n    background: slateblue;\r\n}\r\n", ""]);
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.basics__tabContent__251J0Q7WkV {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.basics__noMargin__BKs9-Ij9qD {\r\n}\r\n\r\n.basics__demoGrid__3eiJyTRGxX {\r\n    display: grid;\r\n    height: 100%;\r\n\r\n    grid-template-columns: repeat(4, 1fr);\r\n    grid-row-gap: 1em;\r\n    grid-column-gap: 1em;\r\n}\r\n\r\n.basics__tile__2GtXq8fGh2 {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.basics__tile0__3PKRlfq1j_ {\r\n    background: blue;\r\n    grid-column: 1/4;\r\n}\r\n\r\n.basics__tile1__2bDlgykFOz {\r\n    background: red;\r\n    grid-row: 1/3;\r\n    grid-column: 4/5;\r\n}\r\n\r\n.basics__tile2__LOB80elyYW {\r\n    background: green;\r\n    grid-area: 2/1/4/3;\r\n}\r\n\r\n.basics__tile3__1ELCx9UIeH {\r\n    background: yellow;\r\n}\r\n\r\n.basics__tile4__2Xfn3sulRA {\r\n    background: purple;\r\n}\r\n\r\n.basics__tile5__1UqyDVA8Fw {\r\n    background: orange;\r\n}\r\n\r\n.basics__tile6__IBRGjx38gM {\r\n    background: brown;\r\n}\r\n\r\n.basics__tile7__30Jdf9A73u {\r\n    background: slateblue;\r\n}\r\n", ""]);
 
 // exports
 exports.locals = {
-	"tabContent": "basics__tabContent__251J0Q7WkV " + __webpack_require__(4).locals["tabContent"] + "",
+	"tabContent": "basics__tabContent__251J0Q7WkV " + __webpack_require__(3).locals["tabContent"] + "",
+	"noMargin": "basics__noMargin__BKs9-Ij9qD " + __webpack_require__(3).locals["noMargin"] + "",
 	"demoGrid": "basics__demoGrid__3eiJyTRGxX",
 	"tile": "basics__tile__2GtXq8fGh2",
 	"tile0": "basics__tile0__3PKRlfq1j_",
@@ -1995,7 +1996,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var styles = __webpack_require__(3);
+var styles = __webpack_require__(4);
 var References = (function (_super) {
     __extends(References, _super);
     function References() {
@@ -2003,13 +2004,14 @@ var References = (function (_super) {
     }
     References.prototype.render = function () {
         return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabContent },
-            "The ",
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { href: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" }, "Mozilla Developer Network"),
-            "is my go-to place for CSS docs. The link has a good reference and 11 guides on different grid aspects.",
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
-            "The ",
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { href: "https://drafts.csswg.org/css-grid/" }, "Grid Layout Spec"),
-            " is also a great reference."));
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { className: styles.noMargin },
+                "The ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { href: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" }, "Mozilla Developer Network"),
+                "is my go-to place for CSS docs. The link has a good reference and 11 guides on different grid aspects.",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
+                "The ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { href: "https://drafts.csswg.org/css-grid/" }, "Grid Layout Spec"),
+                " is also a great reference.")));
     };
     return References;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
