@@ -23,6 +23,8 @@ import {Intro} from "./intro";
 import {Basics} from "./basics";
 import {References} from "./references";
 
+const styles = require<any>("../lab.css");
+
 /*
 The GridLab demonstrates different properties and uses of CSS Grid
 */
@@ -43,7 +45,7 @@ export class GridLab extends React.Component<any, any>  {
     render() {
 
         return (
-            <article>
+            <article className={styles.lab}>
                 <TabControl contents={this.state.contents}/>
             </article>
         );

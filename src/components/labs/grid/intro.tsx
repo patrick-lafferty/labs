@@ -34,6 +34,11 @@ export class Intro extends React.Component<any, any> {
                 for small screen widths the grid has just one column so the tabs are displayed
                 horizontally on the first row, for larger screens they're displayed vertically
                 in the leftmost column.
+
+                Grid offers even more than that. With the new unit <code>fr</code> you can define
+                proportional sizes. You can easily set gaps between rows and columns with
+                <code>grid-row-gap</code> and <code>grid-column-gap</code>. You can have
+                elements span multiple rows and columns.
             </section>
         );
     }

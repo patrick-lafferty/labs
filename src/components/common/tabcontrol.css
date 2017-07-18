@@ -26,6 +26,7 @@ SOFTWARE.
 .tabControl {
     display: grid;
     width: 80%;
+    height:100%;
     margin: auto;
     padding: 2rem;
 
@@ -40,6 +41,7 @@ SOFTWARE.
     padding: 1.5rem;
     border-radius: 2px;
     line-height: 1.62em;
+    height: 100%;
 }
 
 @media (max-width: 640px) {
