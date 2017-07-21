@@ -103,7 +103,7 @@ export class App extends React.Component<AppProps, any> {
         the app bar we want to go back*/
         else if ("tabName" in el.dataset && el.dataset.tabName == "Labs >") {
 
-            window.history.pushState({}, "", "");
+            window.history.pushState({}, "", "#");
             this.setState({route: "", previous: this.state.route, direct: false});
         }
     };

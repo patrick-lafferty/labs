@@ -787,7 +787,7 @@ var App = (function (_super) {
                 _this.setState({ route: route, previous: "", direct: false });
             }
             else if ("tabName" in el.dataset && el.dataset.tabName == "Labs >") {
-                window.history.pushState({}, "", "");
+                window.history.pushState({}, "", "#");
                 _this.setState({ route: "", previous: _this.state.route, direct: false });
             }
         };
@@ -800,7 +800,7 @@ var App = (function (_super) {
         _this.labRoutes = new Map([
             ["Grid", { name: "Grid", component: __WEBPACK_IMPORTED_MODULE_4__labs_grid_grid_lab__["a" /* GridLab */] }],
         ]);
-        _this.tiles = [__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Grid", name: "Grid", route: "Grid" })];
+        _this.tiles = [__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Grid", name: "Grid", route: "Grid", previewImage: "./images/grid-card-preview.png" })];
         return _this;
     }
     /*
@@ -911,7 +911,8 @@ var LabCard = (function (_super) {
     LabCard.prototype.render = function () {
         return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { "data-group": "lab-card", "data-card-route": this.props.route, className: styles.tile },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("h1", { className: styles.secondaryContent }, this.props.name),
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.primaryContent })));
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.primaryContent },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("img", { src: this.props.previewImage }))));
     };
     return LabCard;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
@@ -958,7 +959,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n.labcard__primaryContent__3HGzeJhD0A {\r\n    height: 10rem;\r\n    background: white;\r\n}\r\n\r\n.labcard__secondaryContent__1UudA6iC_5 {\r\n    background: var(--secondary-colour);\r\n    color: var(--secondary-text);\r\n    margin: 0rem;\r\n    font-family: \"Oswald\";\r\n    font-size: 2em;\r\n    padding: 0.7em 1.5em;\r\n}\r\n\r\n.labcard__tile__mwaoglprIV {\r\n    width: 20rem;\r\n    box-shadow: 0px 3px 3px rgba(0,0,0,0.25);\r\n}\r\n\r\n@media (max-width: 360px) {\r\n    .labcard__tile__mwaoglprIV {\r\n        width: unset;\r\n    }\r\n}\r\n\r\n@media (min-width: 361px) and (max-width: 640px) {\r\n    .labcard__tile__mwaoglprIV {\r\n        width: 15rem;\r\n    }\r\n}", ""]);
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n.labcard__primaryContent__3HGzeJhD0A {\r\n    height: 10rem;\r\n    background: white;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.labcard__secondaryContent__1UudA6iC_5 {\r\n    background: var(--secondary-colour);\r\n    color: var(--secondary-text);\r\n    margin: 0rem;\r\n    font-family: \"Oswald\";\r\n    font-size: 2em;\r\n    padding: 0.7em 1.5em;\r\n}\r\n\r\n.labcard__tile__mwaoglprIV {\r\n    width: 20rem;\r\n    box-shadow: 0px 3px 3px rgba(0,0,0,0.25);\r\n}\r\n\r\n@media (max-width: 360px) {\r\n    .labcard__tile__mwaoglprIV {\r\n        width: unset;\r\n    }\r\n}\r\n\r\n@media (min-width: 361px) and (max-width: 640px) {\r\n    .labcard__tile__mwaoglprIV {\r\n        width: 15rem;\r\n    }\r\n}", ""]);
 
 // exports
 exports.locals = {
@@ -1117,6 +1118,8 @@ var Browser = (function (_super) {
     Browser.prototype.render = function () {
         return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.browser },
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__appbar__["a" /* AppBar */], null),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.preamble },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, "Labs are interactive demos focused on one specific concept. Click on the cards below to view the labs.")),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__common_grid__["a" /* Grid */], { children: this.props.children })));
     };
     return Browser;
@@ -1345,11 +1348,12 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n.browser__browser__1X8p2UGXLC {\r\n    flex: 1 0 50%;\r\n}", ""]);
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n.browser__browser__1X8p2UGXLC {\r\n    flex: 1 0 50%;\r\n}\r\n\r\n.browser__preamble__3Xfq3dpQX9 {\r\n    display: flex;\r\n    font-size: 1.5em;\r\n    justify-content: center;\r\n}", ""]);
 
 // exports
 exports.locals = {
-	"browser": "browser__browser__1X8p2UGXLC"
+	"browser": "browser__browser__1X8p2UGXLC",
+	"preamble": "browser__preamble__3Xfq3dpQX9"
 };
 
 /***/ }),
