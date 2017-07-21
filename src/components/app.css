@@ -48,7 +48,7 @@ SOFTWARE.
     animation-name: slideOut;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    will-change: transform;
+    /*will-change: transform;*/
 }
 
 .directOffscreenApp {

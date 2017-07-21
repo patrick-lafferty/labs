@@ -63,13 +63,13 @@ export class Areas extends React.Component<any, any> {
             this.radioButtons.push((
                 <label key={key} htmlFor={key} >
                         <input name="layout" id={key} defaultChecked={layout == this.state.layout ? true : undefined}
-                            value={key} type="radio" onInput={this.onInput}/>
+                            value={key} type="radio" onInput={this.onLayoutInput}/>
                     {layout.label}</label>
             ));
         });
     }
 
-    onInput = () => {
+    onLayoutInput = () => {
         let element = document.querySelector("input[type=radio]:checked");
 
         if (element != null && element instanceof HTMLInputElement) {
@@ -77,9 +77,20 @@ export class Areas extends React.Component<any, any> {
         }
     }
 
+    onGapInput = (e : React.FormEvent<HTMLInputElement>) => {
+        let areasSection = document.querySelector("#areas") as HTMLElement;
+
+        if (e.currentTarget.name == "rowGap") {
+            areasSection.style.setProperty('--rowGap', e.currentTarget.value + 'em');
+        }
+        else {
+            areasSection.style.setProperty('--columnGap', e.currentTarget.value + 'em');
+        }
+    }
+
     render() {
         return (
-            <section className={styles.tabContent}>
+            <section id="areas" className={styles.tabContent}>
                 <p className={styles.noMargin}>
                     Grid Areas are a convenient way to define rectangular areas
                     where content can be layed out. This example shows how by just
@@ -94,6 +105,11 @@ export class Areas extends React.Component<any, any> {
 
                 <div className={styles.layouts}>
                     {this.radioButtons}    
+                </div>
+
+                <div className={styles.layouts}>
+                    <label>Row gap: <input defaultValue="0" onInput={this.onGapInput} name="rowGap" type="range" min="0" max="10"/></label>
+                    <label>Column gap: <input defaultValue="0" onInput={this.onGapInput} name="columnGap" type="range" min="0" max="10"/></label>
                 </div>
 
                 <div className={this.state.layout.className}>
