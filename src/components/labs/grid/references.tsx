@@ -30,7 +30,12 @@ export class References extends React.Component<any, any> {
 
                 <br />
                 The <a href="https://drafts.csswg.org/css-grid/">Grid Layout Spec</a> is also a great
-                reference.</p>
+                reference.
+
+                <br/>
+                <a href="http://cssgridgarden.com/">The CSS Grid Garden</a> is an interesting interactive
+                tutorial on grids.
+                </p>                
             </section>
         );
     }
