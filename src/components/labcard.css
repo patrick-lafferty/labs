@@ -20,6 +20,9 @@ SOFTWARE.
 .primaryContent {
     height: 10rem;
     background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .secondaryContent {

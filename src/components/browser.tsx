@@ -33,6 +33,12 @@ export class Browser extends React.Component<BrowserProps, any> {
         return (
             <div className={styles.browser}> 
                 <AppBar />
+                
+                <div className={styles.preamble}>
+                    <p>Labs are interactive demos focused on one specific concept.
+                    Click on the cards below to view the labs.</p>
+                </div>
+
                 <Grid children={this.props.children}/>
             </div>
         );

@@ -20,3 +20,9 @@ SOFTWARE.
 .browser {
     flex: 1 0 50%;
 }
+
+.preamble {
+    display: flex;
+    font-size: 1.5em;
+    justify-content: center;
+}
