@@ -695,8 +695,8 @@ SOFTWARE.
 
 
 
-__webpack_require__(39);
-__webpack_require__(41);
+__webpack_require__(42);
+__webpack_require__(44);
 __WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_app__["a" /* App */], null), document.getElementById("root"));
 
 
@@ -800,9 +800,7 @@ var App = (function (_super) {
         _this.labRoutes = new Map([
             ["Grid", { name: "Grid", component: __WEBPACK_IMPORTED_MODULE_4__labs_grid_grid_lab__["a" /* GridLab */] }],
         ]);
-        _this.tiles = [
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Grid", name: "Grid", route: "Grid" })
-        ];
+        _this.tiles = [__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Grid", name: "Grid", route: "Grid" })];
         return _this;
     }
     /*
@@ -1637,7 +1635,8 @@ exports.locals = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_tabcontrol__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__basics__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__references__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__areas__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__references__ = __webpack_require__(39);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1672,7 +1671,8 @@ SOFTWARE.
 
 
 
-var styles = __webpack_require__(37);
+
+var styles = __webpack_require__(40);
 /*
 The GridLab demonstrates different properties and uses of CSS Grid
 */
@@ -1684,7 +1684,8 @@ var GridLab = (function (_super) {
             contents: new Map([
                 ["Intro", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__intro__["a" /* Intro */], null)],
                 ["Basics", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_3__basics__["a" /* Basics */], null)],
-                ["References", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_4__references__["a" /* References */], null)]
+                ["Areas", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_4__areas__["a" /* Areas */], null)],
+                ["References", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_5__references__["a" /* References */], null)]
             ])
         };
         return _this;
@@ -1963,6 +1964,173 @@ exports.locals = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Areas; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+MIT License
+Copyright (c) 2017 Patrick Lafferty
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+var styles = __webpack_require__(37);
+;
+;
+var Cell = (function (_super) {
+    __extends(Cell, _super);
+    function Cell() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Cell.prototype.render = function () {
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: this.props.className },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", null, this.props.caption)));
+    };
+    return Cell;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+var Areas = (function (_super) {
+    __extends(Areas, _super);
+    function Areas(props) {
+        var _this = _super.call(this, props) || this;
+        _this.layouts = new Map([
+            ["oneSidebarLeft",
+                { className: styles.oneSidebarLeft,
+                    label: "One Sidebar Left" }],
+            ["oneSidebarRight",
+                { className: styles.oneSidebarRight,
+                    label: "One Sidebar Right" }],
+            ["singleColumn",
+                { className: styles.singleColumn,
+                    label: "Single Column" }],
+            ["twoSidebars",
+                { className: styles.twoSidebars,
+                    label: "Two Sidebars" }],
+        ]);
+        _this.radioButtons = [];
+        _this.onInput = function () {
+            var element = document.querySelector("input[type=radio]:checked");
+            if (element != null && element instanceof HTMLInputElement) {
+                _this.setState({ layout: _this.layouts.get(element.value) });
+            }
+        };
+        _this.state = {
+            layout: _this.layouts.get("oneSidebarLeft")
+        };
+        _this.layouts.forEach(function (layout, key) {
+            _this.radioButtons.push((__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", { key: key, htmlFor: key },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { name: "layout", id: key, defaultChecked: layout == _this.state.layout ? true : undefined, value: key, type: "radio", onInput: _this.onInput }),
+                layout.label)));
+        });
+        return _this;
+    }
+    Areas.prototype.render = function () {
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabContent },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { className: styles.noMargin },
+                "Grid Areas are a convenient way to define rectangular areas where content can be layed out. This example shows how by just modifying a few lines of only the grid's css (and leaving the children's css and html untouched*) the layout of the whole page can be transformed.",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("br", null),
+                "*with the exception of the two sidebar layout which hides sidebar2 if a layout without it is selected"),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.layouts }, this.radioButtons),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: this.state.layout.className },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](Cell, { className: styles.header, caption: "Header" }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](Cell, { className: styles.sidebar, caption: "Sidebar" }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](Cell, { className: styles.content, caption: "Content" }),
+                this.state.layout.label == "Two Sidebars" ?
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](Cell, { className: styles.sidebar2, caption: "Sidebar2" })
+                    : null,
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](Cell, { className: styles.footer, caption: "Footer" }))));
+    };
+    return Areas;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+
+
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(38);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--3-0!./areas.css", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--3-0!./areas.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+exports.i(__webpack_require__(3), undefined);
+
+// module
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.areas__tabContent__21V3igVW2R {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.areas__noMargin__2HhFOnxhKD {\r\n}\r\n\r\n.areas__layouts__dANH4fAhZS {\r\n    display: flex;\r\n    justify-content: space-around;\r\n}\r\n\r\n.areas__oneSidebarLeft__2tJHQrZY4r {\r\n    display: grid;\r\n    grid-template-areas: \r\n        \"header header\"\r\n        \"sidebar content\"\r\n        \"footer footer\";\r\n    grid-template-rows: 10rem 1fr 10rem;\r\n    grid-template-columns: 1fr 3fr;\r\n    height: 100%;\r\n}\r\n\r\n.areas__oneSidebarRight__3nvLWrR8TX {\r\n    display: grid;\r\n    grid-template-areas: \r\n        \"header header\"\r\n        \"content sidebar\"\r\n        \"footer footer\";\r\n    grid-template-rows: 10rem 1fr 10rem;\r\n    grid-template-columns: 3fr 1fr;\r\n    height: 100%;\r\n}\r\n\r\n.areas__singleColumn__3hMZgh54E8 {\r\n    display: grid;\r\n    grid-template-areas:\r\n        \"header\"\r\n        \"content\"\r\n        \"sidebar\"\r\n        \"footer\";\r\n    grid-template-rows: 10rem 1fr 1fr 10rem;\r\n    grid-template-columns: 1fr;\r\n    height: 100%;\r\n}\r\n\r\n.areas__twoSidebars__1QDBTLSS_z {\r\n    display: grid;\r\n    grid-template-areas:\r\n        \"header header header\"\r\n        \"sidebar content sidebar2\"\r\n        \"footer footer footer\";\r\n    grid-template-rows: 10rem 1fr 10rem;\r\n    grid-template-columns: 1fr 2fr 1fr;\r\n    height: 100%;\r\n}\r\n\r\n.areas__cell__1HqjZR51e- {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n}\r\n\r\n.areas__header__LBi61pv9cS {\r\n    grid-area: header;\r\n    background-color: darkturquoise;\r\n}\r\n\r\n.areas__sidebar__2PjNqqNdTB {\r\n    grid-area: sidebar;\r\n    background-color: cornflowerblue;\r\n}\r\n\r\n.areas__content__OaBpbeUZ-o {\r\n    grid-area: content;\r\n    background-color: blue;\r\n}\r\n\r\n.areas__sidebar2__2yzj-ceg_1 {\r\n    grid-area: sidebar2;\r\n    background-color: fuchsia;\r\n}\r\n\r\n.areas__footer__2W5MeTu2lP {\r\n    grid-area: footer;\r\n    background-color: purple;\r\n}", ""]);
+
+// exports
+exports.locals = {
+	"tabContent": "areas__tabContent__21V3igVW2R " + __webpack_require__(3).locals["tabContent"] + "",
+	"noMargin": "areas__noMargin__2HhFOnxhKD " + __webpack_require__(3).locals["noMargin"] + "",
+	"layouts": "areas__layouts__dANH4fAhZS",
+	"oneSidebarLeft": "areas__oneSidebarLeft__2tJHQrZY4r",
+	"oneSidebarRight": "areas__oneSidebarRight__3nvLWrR8TX",
+	"singleColumn": "areas__singleColumn__3hMZgh54E8",
+	"twoSidebars": "areas__twoSidebars__1QDBTLSS_z",
+	"cell": "areas__cell__1HqjZR51e-",
+	"header": "areas__header__LBi61pv9cS areas__cell__1HqjZR51e-",
+	"sidebar": "areas__sidebar__2PjNqqNdTB areas__cell__1HqjZR51e-",
+	"content": "areas__content__OaBpbeUZ-o areas__cell__1HqjZR51e-",
+	"sidebar2": "areas__sidebar2__2yzj-ceg_1 areas__cell__1HqjZR51e-",
+	"footer": "areas__footer__2W5MeTu2lP areas__cell__1HqjZR51e-"
+};
+
+/***/ }),
+/* 39 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return References; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
@@ -2019,13 +2187,13 @@ var References = (function (_super) {
 
 
 /***/ }),
-/* 37 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(38);
+var content = __webpack_require__(41);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2050,7 +2218,7 @@ if(false) {
 }
 
 /***/ }),
-/* 38 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -2066,13 +2234,13 @@ exports.locals = {
 };
 
 /***/ }),
-/* 39 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(40);
+var content = __webpack_require__(43);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2097,7 +2265,7 @@ if(false) {
 }
 
 /***/ }),
-/* 40 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -2111,13 +2279,13 @@ exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Laffert
 
 
 /***/ }),
-/* 41 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(42);
+var content = __webpack_require__(45);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2142,7 +2310,7 @@ if(false) {
 }
 
 /***/ }),
-/* 42 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);

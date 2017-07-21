@@ -21,6 +21,7 @@ import * as React from "react";
 import {TabControl} from "../../common/tabcontrol";
 import {Intro} from "./intro";
 import {Basics} from "./basics";
+import {Areas} from "./areas";
 import {References} from "./references";
 
 const styles = require<any>("../lab.css");
@@ -37,6 +38,7 @@ export class GridLab extends React.Component<any, any>  {
             contents: new Map<string, JSX.Element>([
                 ["Intro", <Intro />],
                 ["Basics", <Basics />],
+                ["Areas", <Areas />],
                 ["References", <References />]
             ])
         };

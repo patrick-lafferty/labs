@@ -79,8 +79,7 @@ export class App extends React.Component<AppProps, any> {
             ["Grid", {name: "Grid", component: GridLab}], 
         ]);
 
-        this.tiles = [
-            <LabCard key="Grid" name="Grid" route="Grid"/>];
+        this.tiles = [<LabCard key="Grid" name="Grid" route="Grid"/>];
     }
 
     click = (e : React.MouseEvent<HTMLDivElement>) => {
