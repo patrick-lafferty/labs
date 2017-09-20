@@ -32,6 +32,7 @@ SOFTWARE.
     font-family: "Exo 2";
     
     overflow: hidden;
+    cursor: pointer;
 }
 
 @media (max-width: 640px) {
