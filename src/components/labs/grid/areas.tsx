@@ -63,13 +63,13 @@ export class Areas extends React.Component<any, any> {
             this.radioButtons.push((
                 <label key={key} htmlFor={key} >
                         <input name="layout" id={key} defaultChecked={layout == this.state.layout ? true : undefined}
-                            value={key} type="radio" onInput={this.onLayoutInput}/>
+                            value={key} type="radio" onChange={this.onLayoutChange}/>
                     {layout.label}</label>
             ));
         });
     }
 
-    onLayoutInput = () => {
+    onLayoutChange = () => {
         let element = document.querySelector("input[type=radio]:checked");
 
         if (element != null && element instanceof HTMLInputElement) {
