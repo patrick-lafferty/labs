@@ -18,24 +18,26 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 import * as React from "react";
-const styles = require<any>("../../common/tabcontrol.css");
+const styles = require<any>("./basics.css");
 
-export class Intro extends React.Component<any, any> {
+export class Basics extends React.Component<any, any> {
     render() {
         return (
             <section className={styles.tabContent}>
-                <p className={styles.noMargin}>CSS Flexbox Layout is a flexible layout system that allows you to arrange
-                items linearly along either a single (possibly wrapped) row or column.
-                It offers full control over how the items are laid out horizontally and vertically.
-                Flex items can be proportionally sized, where they expand to fill the flexbox's size
-                according to their flex-grow values, they can be fixed size, or a combination of both:
-                giving a minimum fixed size and then dividing up the remaining space proportionally.
+                <p className={styles.noMargin}>This is a basic flexbox example with various coloured divs. 
+                    The blue has a flex-grow value of 3, the green div has a fixed width of
+                    10rem, the red div has a flex-grow value of 2, and the 
+                    remaining divs are all flex-grow 1. 
+                </p>
 
-                Flexbox offers a great alternative to positioning items with floats.
-                They make centering text (or any content in general) horizontally and vertically a breeze.
-                As of September 2017 Flexbox boasts a <a href="http://caniuse.com/#feat=flexbox">very high</a> 
-                 support across all browsers, over 90% (the holdouts being mostly IE versions &lt; 9, with some 
-                minor incompatibilities on IE >= 10 and UC Browser for Android).</p>
+                <div className={styles.demoFlexbox}>
+                    <div className={styles.tile0}></div>
+                    <div className={styles.tile1}></div>
+                    <div className={styles.tile2}></div>
+                    <div className={styles.tile3}></div>
+                    <div className={styles.tile4}></div>
+                    <div className={styles.tile5}></div>
+                </div>
             </section>
         );
     }

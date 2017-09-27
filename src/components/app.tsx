@@ -26,6 +26,7 @@ const styles = require<any>("./app.css");
 
 //labs
 import {GridLab} from './labs/grid/grid-lab';
+import {FlexLab} from './labs/flexbox/flex-lab';
 
 /*
 A route maps the hash part of a url to a component type to render
@@ -77,9 +78,13 @@ export class App extends React.Component<AppProps, any> {
 
         this.labRoutes = new Map<string, Route>([
             ["Grid", {name: "Grid", component: GridLab}], 
+            ["Flexbox", {name: "Flexbox", component: FlexLab}]
         ]);
 
-        this.tiles = [<LabCard key="Grid" name="Grid" route="Grid" previewImage="./images/grid-card-preview.png"/>];
+        this.tiles = [
+            <LabCard key="Grid" name="Grid" route="Grid" previewImage="./images/grid-card-preview.png"/>,
+            <LabCard key="Flexbox" name="Flexbox" route="Flexbox" previewImage="./images/flexbox-card-preview.png"/>
+        ];
     }
 
     click = (e : React.MouseEvent<HTMLDivElement>) => {
