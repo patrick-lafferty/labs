@@ -33,7 +33,7 @@ export class Intro extends React.Component<any, any> {
 
                 Flexbox offers a great alternative to positioning items with floats.
                 They make centering text (or any content in general) horizontally and vertically a breeze.
-                As of September 2017 Flexbox boasts a <a href="http://caniuse.com/#feat=flexbox">very high</a> 
+                As of September 2017 Flexbox boasts a <a href="http://caniuse.com/#feat=flexbox">very high </a> 
                  support across all browsers, over 90% (the holdouts being mostly IE versions &lt; 9, with some 
                 minor incompatibilities on IE >= 10 and UC Browser for Android).</p>
             </section>

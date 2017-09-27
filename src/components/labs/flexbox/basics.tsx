@@ -21,6 +21,29 @@ import * as React from "react";
 const styles = require<any>("./basics.css");
 
 export class Basics extends React.Component<any, any> {
+
+    constructor(props: any) {
+        super(props);
+
+        this.state = {
+            direction: "row"
+        };
+    }
+
+    onDirectionChange = () => {
+        let element = document.querySelector("input[type=radio]:checked");
+        
+        if (element != null && element instanceof HTMLInputElement) {
+            
+            this.setState({direction: element.value});
+            let flex = document.querySelector("#basicFlexbox");
+            
+            if (flex != null && flex instanceof HTMLDivElement) {
+                flex.style.setProperty("--direction", element.value);
+            }
+        }
+    }
+
     render() {
         return (
             <section className={styles.tabContent}>
@@ -30,7 +53,12 @@ export class Basics extends React.Component<any, any> {
                     remaining divs are all flex-grow 1. 
                 </p>
 
-                <div className={styles.demoFlexbox}>
+                <div className={styles.directions}>
+                    <label>Row <input value="row" id="row" checked={this.state.direction === "row"} onChange={this.onDirectionChange} name="direction" type="radio"/></label>
+                    <label>Column <input value="column" id="column" checked={this.state.direction === "column"} onChange={this.onDirectionChange} name="direction" type="radio"/></label>
+                </div>
+
+                <div id="basicFlexbox" className={styles.demoFlexbox}>
                     <div className={styles.tile0}></div>
                     <div className={styles.tile1}></div>
                     <div className={styles.tile2}></div>

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -198,7 +198,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(13);
+var	fixUrls = __webpack_require__(15);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -568,7 +568,7 @@ if(false) {
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(16);
+var content = __webpack_require__(18);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -630,7 +630,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var styles = __webpack_require__(24);
+var styles = __webpack_require__(26);
 ;
 var Button = (function (_super) {
     __extends(Button, _super);
@@ -667,12 +667,121 @@ var Button = (function (_super) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabControl; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button__ = __webpack_require__(6);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+MIT License
+Copyright (c) 2017 Patrick Lafferty
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+
+var styles = __webpack_require__(4);
+;
+;
+var TabControl = (function (_super) {
+    __extends(TabControl, _super);
+    function TabControl(props) {
+        var _this = _super.call(this, props) || this;
+        _this.click = function (e) {
+            var el = e.target;
+            if (el.dataset.tabName) {
+                var tabName_1 = el.dataset.tabName;
+                var clickedTab = _this.state.tabs.find(function (tab) { return tab == tabName_1; });
+                if (clickedTab) {
+                    _this.setState({ content: clickedTab });
+                    e.stopPropagation();
+                }
+            }
+        };
+        var tabs = [];
+        props.contents.forEach(function (_, key) { return tabs.push(key); });
+        _this.state = {
+            content: tabs[0],
+            tabs: tabs
+        };
+        return _this;
+    }
+    TabControl.prototype.render = function () {
+        var tabs = this.state.tabs.map(function (name) { return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__button__["a" /* Button */], { key: name, name: name }); });
+        var content = this.props.contents.get(this.state.content);
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabControl, onClick: this.click },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tabBlock }, tabs),
+            content));
+    };
+    return TabControl;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(41);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--3-0!./lab.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--3-0!./lab.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_app__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_app__ = __webpack_require__(11);
 /*
 MIT License
 Copyright (c) 2017 Patrick Lafferty
@@ -695,29 +804,30 @@ SOFTWARE.
 
 
 
-__webpack_require__(42);
-__webpack_require__(44);
+__webpack_require__(47);
+__webpack_require__(49);
 __WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_app__["a" /* App */], null), document.getElementById("root"));
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = ReactDOM;
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return App; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__labcard__ = __webpack_require__(10);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__browser__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__labviewer__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__labs_grid_grid_lab__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__labcard__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__browser__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__labviewer__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__labs_grid_grid_lab__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__labs_flexbox_flex_lab__ = __webpack_require__(42);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -753,6 +863,7 @@ SOFTWARE.
 
 var styles = __webpack_require__(5);
 //labs
+
 
 ;
 ;
@@ -799,8 +910,12 @@ var App = (function (_super) {
         window.onpopstate = _this.stateChanged;
         _this.labRoutes = new Map([
             ["Grid", { name: "Grid", component: __WEBPACK_IMPORTED_MODULE_4__labs_grid_grid_lab__["a" /* GridLab */] }],
+            ["Flexbox", { name: "Flexbox", component: __WEBPACK_IMPORTED_MODULE_5__labs_flexbox_flex_lab__["a" /* FlexLab */] }]
         ]);
-        _this.tiles = [__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Grid", name: "Grid", route: "Grid", previewImage: "./images/grid-card-preview.png" })];
+        _this.tiles = [
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Grid", name: "Grid", route: "Grid", previewImage: "./images/grid-card-preview.png" }),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__labcard__["a" /* LabCard */], { key: "Flexbox", name: "Flexbox", route: "Flexbox", previewImage: "./images/flexbox-card-preview.png" })
+        ];
         return _this;
     }
     /*
@@ -860,7 +975,7 @@ var App = (function (_super) {
 
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -897,7 +1012,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var styles = __webpack_require__(11);
+var styles = __webpack_require__(13);
 ;
 /*
 A lab card component is a tile that previews a webapp with a heading and image,
@@ -920,13 +1035,13 @@ var LabCard = (function (_super) {
 
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(12);
+var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -951,7 +1066,7 @@ if(false) {
 }
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -969,7 +1084,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports) {
 
 
@@ -1064,15 +1179,15 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Browser; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__appbar__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_grid__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__appbar__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common_grid__ = __webpack_require__(19);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1105,7 +1220,7 @@ SOFTWARE.
 
 
 
-var styles = __webpack_require__(20);
+var styles = __webpack_require__(22);
 ;
 /*
 A Browser renders the main app bar along with a grid of tiles
@@ -1128,7 +1243,7 @@ var Browser = (function (_super) {
 
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1184,7 +1299,7 @@ var AppBar = (function (_super) {
 
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -1206,7 +1321,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1243,7 +1358,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var styles = __webpack_require__(18);
+var styles = __webpack_require__(20);
 ;
 /*
 The grid component renders tiles in an evenly spaced css grid
@@ -1262,13 +1377,13 @@ var Grid = (function (_super) {
 
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(19);
+var content = __webpack_require__(21);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1293,7 +1408,7 @@ if(false) {
 }
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -1309,13 +1424,13 @@ exports.locals = {
 };
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(21);
+var content = __webpack_require__(23);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1340,7 +1455,7 @@ if(false) {
 }
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -1357,14 +1472,14 @@ exports.locals = {
 };
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LabViewer; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__labbar__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__labbar__ = __webpack_require__(25);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1396,7 +1511,7 @@ SOFTWARE.
 */
 
 
-var styles = __webpack_require__(28);
+var styles = __webpack_require__(30);
 ;
 /*
 A LabViewer renders a Lab with a LabBar at the top of the screen
@@ -1417,7 +1532,7 @@ var LabViewer = (function (_super) {
 
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1456,7 +1571,7 @@ SOFTWARE.
 */
 
 
-var styles = __webpack_require__(26);
+var styles = __webpack_require__(28);
 ;
 /*
 LabBar represents the top app bar with the lab's name and
@@ -1482,13 +1597,13 @@ var LabBar = (function (_super) {
 
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(25);
+var content = __webpack_require__(27);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1513,7 +1628,7 @@ if(false) {
 }
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -1532,13 +1647,13 @@ exports.locals = {
 };
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(27);
+var content = __webpack_require__(29);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1563,7 +1678,7 @@ if(false) {
 }
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -1582,13 +1697,13 @@ exports.locals = {
 };
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(29);
+var content = __webpack_require__(31);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1613,7 +1728,7 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -1629,18 +1744,18 @@ exports.locals = {
 };
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GridLab; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_tabcontrol__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(32);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__basics__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__areas__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__references__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_tabcontrol__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__basics__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__areas__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__references__ = __webpack_require__(40);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1676,7 +1791,7 @@ SOFTWARE.
 
 
 
-var styles = __webpack_require__(40);
+var styles = __webpack_require__(8);
 /*
 The GridLab demonstrates different properties and uses of CSS Grid
 */
@@ -1704,85 +1819,7 @@ var GridLab = (function (_super) {
 
 
 /***/ }),
-/* 31 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabControl; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__button__ = __webpack_require__(6);
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-/*
-MIT License
-Copyright (c) 2017 Patrick Lafferty
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
-
-
-var styles = __webpack_require__(4);
-;
-;
-var TabControl = (function (_super) {
-    __extends(TabControl, _super);
-    function TabControl(props) {
-        var _this = _super.call(this, props) || this;
-        _this.click = function (e) {
-            var el = e.target;
-            if (el.dataset.tabName) {
-                var tabName_1 = el.dataset.tabName;
-                var clickedTab = _this.state.tabs.find(function (tab) { return tab == tabName_1; });
-                if (clickedTab) {
-                    _this.setState({ content: clickedTab });
-                    e.stopPropagation();
-                }
-            }
-        };
-        var tabs = [];
-        props.contents.forEach(function (_, key) { return tabs.push(key); });
-        _this.state = {
-            content: tabs[0],
-            tabs: tabs
-        };
-        return _this;
-    }
-    TabControl.prototype.render = function () {
-        var tabs = this.state.tabs.map(function (name) { return __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__button__["a" /* Button */], { key: name, name: name }); });
-        var content = this.props.contents.get(this.state.content);
-        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabControl, onClick: this.click },
-            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tabBlock }, tabs),
-            content));
-    };
-    return TabControl;
-}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
-
-
-
-/***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1846,7 +1883,7 @@ var Intro = (function (_super) {
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1883,7 +1920,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var styles = __webpack_require__(34);
+var styles = __webpack_require__(35);
 var Basics = (function (_super) {
     __extends(Basics, _super);
     function Basics() {
@@ -1906,13 +1943,13 @@ var Basics = (function (_super) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(35);
+var content = __webpack_require__(36);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -1937,7 +1974,7 @@ if(false) {
 }
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -1964,7 +2001,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2001,7 +2038,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-var styles = __webpack_require__(37);
+var styles = __webpack_require__(38);
 ;
 ;
 var Cell = (function (_super) {
@@ -2088,13 +2125,13 @@ var Areas = (function (_super) {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(38);
+var content = __webpack_require__(39);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2119,7 +2156,7 @@ if(false) {
 }
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -2148,7 +2185,7 @@ exports.locals = {
 };
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2211,37 +2248,6 @@ var References = (function (_super) {
 
 
 /***/ }),
-/* 40 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(41);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
-
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(2)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../../node_modules/css-loader/index.js??ref--3-0!./lab.css", function() {
-			var newContent = require("!!../../../node_modules/css-loader/index.js??ref--3-0!./lab.css");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
-	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2259,12 +2265,278 @@ exports.locals = {
 
 /***/ }),
 /* 42 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FlexLab; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_tabcontrol__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__basics__ = __webpack_require__(44);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+MIT License
+Copyright (c) 2017 Patrick Lafferty
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+
+
+
+/*import {Areas} from "./areas";
+import {References} from "./references";*/
+var styles = __webpack_require__(8);
+/*
+The FlexLab demonstrates different properties and uses of CSS Flexbox
+*/
+var FlexLab = (function (_super) {
+    __extends(FlexLab, _super);
+    function FlexLab(props) {
+        var _this = _super.call(this, props) || this;
+        _this.state = {
+            contents: new Map([
+                ["Intro", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__intro__["a" /* Intro */], null)],
+                ["Basics", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_3__basics__["a" /* Basics */], null)],
+            ])
+        };
+        return _this;
+    }
+    FlexLab.prototype.render = function () {
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("article", { className: styles.lab },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_1__common_tabcontrol__["a" /* TabControl */], { contents: this.state.contents })));
+    };
+    return FlexLab;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+
+
+
+/***/ }),
+/* 43 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Intro; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+MIT License
+Copyright (c) 2017 Patrick Lafferty
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+var styles = __webpack_require__(4);
+var Intro = (function (_super) {
+    __extends(Intro, _super);
+    function Intro() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Intro.prototype.render = function () {
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabContent },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { className: styles.noMargin },
+                "CSS Flexbox Layout is a flexible layout system that allows you to arrange items linearly along either a single (possibly wrapped) row or column. It offers full control over how the items are laid out horizontally and vertically. Flex items can be proportionally sized, where they expand to fill the flexbox's size according to their flex-grow values, they can be fixed size, or a combination of both: giving a minimum fixed size and then dividing up the remaining space proportionally. Flexbox offers a great alternative to positioning items with floats. They make centering text (or any content in general) horizontally and vertically a breeze. As of September 2017 Flexbox boasts a ",
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("a", { href: "http://caniuse.com/#feat=flexbox" }, "very high "),
+                "support across all browsers, over 90% (the holdouts being mostly IE versions < 9, with some minor incompatibilities on IE >= 10 and UC Browser for Android).")));
+    };
+    return Intro;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Basics; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+MIT License
+Copyright (c) 2017 Patrick Lafferty
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+var styles = __webpack_require__(45);
+var Basics = (function (_super) {
+    __extends(Basics, _super);
+    function Basics(props) {
+        var _this = _super.call(this, props) || this;
+        _this.onDirectionChange = function () {
+            var element = document.querySelector("input[type=radio]:checked");
+            if (element != null && element instanceof HTMLInputElement) {
+                _this.setState({ direction: element.value });
+                var flex = document.querySelector("#basicFlexbox");
+                if (flex != null && flex instanceof HTMLDivElement) {
+                    flex.style.setProperty("--direction", element.value);
+                }
+            }
+        };
+        _this.state = {
+            direction: "row"
+        };
+        return _this;
+    }
+    Basics.prototype.render = function () {
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabContent },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { className: styles.noMargin }, "This is a basic flexbox example with various coloured divs. The blue has a flex-grow value of 3, the green div has a fixed width of 10rem, the red div has a flex-grow value of 2, and the remaining divs are all flex-grow 1."),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.directions },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null,
+                    "Row ",
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: "row", id: "row", checked: this.state.direction === "row", onChange: this.onDirectionChange, name: "direction", type: "radio" })),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null,
+                    "Column ",
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: "column", id: "column", checked: this.state.direction === "column", onChange: this.onDirectionChange, name: "direction", type: "radio" }))),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { id: "basicFlexbox", className: styles.demoFlexbox },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile0 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile1 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile2 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile3 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile4 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile5 }))));
+    };
+    return Basics;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+
+
+
+/***/ }),
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(43);
+var content = __webpack_require__(46);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--3-0!./basics.css", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--3-0!./basics.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+exports.i(__webpack_require__(3), undefined);
+
+// module
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.basics__tabContent__3c_YLwQWWS {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.basics__noMargin__Z2ldqLMqbU {\r\n}\r\n\r\n.basics__demoFlexbox__3yzrx3MAa1 {\r\n    display: flex;\r\n    height: 100%;\r\n    --direction: row;\r\n    flex-direction: var(--direction);\r\n}\r\n\r\n.basics__tile__uLsRvlWmK4 {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.basics__tile0__3Swbl_xRxD {\r\n    background: blue;\r\n    flex: 3 1 auto; \r\n}\r\n\r\n.basics__tile1__3mwX_hOuFL {\r\n    background: green;\r\n    flex: 0 10rem;\r\n}\r\n\r\n.basics__tile2__3Z4sJYVNbg {\r\n    background: red;\r\n    flex: 2 1 auto;\r\n}\r\n\r\n.basics__tile3__1O6c-s7a55 {\r\n    background: yellow;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile4__2AoZfjpsxT {\r\n    background: purple;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile5__8wJCTHu53C {\r\n    background: orange;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile6__r6Dg5CxaLB {\r\n    background: brown;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile7__2TNCYByAne {\r\n    background: slateblue;\r\n    flex: 1 1 auto;\r\n}\r\n", ""]);
+
+// exports
+exports.locals = {
+	"tabContent": "basics__tabContent__3c_YLwQWWS " + __webpack_require__(3).locals["tabContent"] + "",
+	"noMargin": "basics__noMargin__Z2ldqLMqbU " + __webpack_require__(3).locals["noMargin"] + "",
+	"demoFlexbox": "basics__demoFlexbox__3yzrx3MAa1",
+	"tile": "basics__tile__uLsRvlWmK4",
+	"tile0": "basics__tile0__3Swbl_xRxD",
+	"tile1": "basics__tile1__3mwX_hOuFL",
+	"tile2": "basics__tile2__3Z4sJYVNbg",
+	"tile3": "basics__tile3__1O6c-s7a55",
+	"tile4": "basics__tile4__2AoZfjpsxT",
+	"tile5": "basics__tile5__8wJCTHu53C",
+	"tile6": "basics__tile6__r6Dg5CxaLB",
+	"tile7": "basics__tile7__2TNCYByAne"
+};
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2289,7 +2561,7 @@ if(false) {
 }
 
 /***/ }),
-/* 43 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -2303,13 +2575,13 @@ exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Laffert
 
 
 /***/ }),
-/* 44 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(45);
+var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2334,7 +2606,7 @@ if(false) {
 }
 
 /***/ }),
-/* 45 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);

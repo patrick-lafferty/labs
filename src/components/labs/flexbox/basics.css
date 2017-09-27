@@ -31,8 +31,8 @@ SOFTWARE.
 .demoFlexbox {
     display: flex;
     height: 100%;
-
-    
+    --direction: row;
+    flex-direction: var(--direction);
 }
 
 .tile {
