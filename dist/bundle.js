@@ -804,8 +804,8 @@ SOFTWARE.
 
 
 
-__webpack_require__(47);
-__webpack_require__(49);
+__webpack_require__(50);
+__webpack_require__(52);
 __WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__components_app__["a" /* App */], null), document.getElementById("root"));
 
 
@@ -2274,6 +2274,7 @@ exports.locals = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common_tabcontrol__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__basics__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__alignment__ = __webpack_require__(47);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -2307,6 +2308,7 @@ SOFTWARE.
 
 
 
+
 /*import {Areas} from "./areas";
 import {References} from "./references";*/
 var styles = __webpack_require__(8);
@@ -2321,6 +2323,9 @@ var FlexLab = (function (_super) {
             contents: new Map([
                 ["Intro", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__intro__["a" /* Intro */], null)],
                 ["Basics", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_3__basics__["a" /* Basics */], null)],
+                ["Alignment", __WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_4__alignment__["a" /* Alignment */], null)]
+                /*["Areas", <Areas />],
+                ["References", <References />]*/
             ])
         };
         return _this;
@@ -2457,7 +2462,13 @@ var Basics = (function (_super) {
                     __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: "row", id: "row", checked: this.state.direction === "row", onChange: this.onDirectionChange, name: "direction", type: "radio" })),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null,
                     "Column ",
-                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: "column", id: "column", checked: this.state.direction === "column", onChange: this.onDirectionChange, name: "direction", type: "radio" }))),
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: "column", id: "column", checked: this.state.direction === "column", onChange: this.onDirectionChange, name: "direction", type: "radio" })),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null,
+                    "Row Reverse ",
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: "row-reverse", id: "row-reverse", checked: this.state.direction === "row-reverse", onChange: this.onDirectionChange, name: "direction", type: "radio" })),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null,
+                    "Column Reverse ",
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("input", { value: "column-reverse", id: "column-reverse", checked: this.state.direction === "column-reverse", onChange: this.onDirectionChange, name: "direction", type: "radio" }))),
             __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { id: "basicFlexbox", className: styles.demoFlexbox },
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile0 }),
                 __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile1 }),
@@ -2511,13 +2522,14 @@ exports = module.exports = __webpack_require__(1)(undefined);
 exports.i(__webpack_require__(3), undefined);
 
 // module
-exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.basics__tabContent__3c_YLwQWWS {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.basics__noMargin__Z2ldqLMqbU {\r\n}\r\n\r\n.basics__demoFlexbox__3yzrx3MAa1 {\r\n    display: flex;\r\n    height: 100%;\r\n    --direction: row;\r\n    flex-direction: var(--direction);\r\n}\r\n\r\n.basics__tile__uLsRvlWmK4 {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.basics__tile0__3Swbl_xRxD {\r\n    background: blue;\r\n    flex: 3 1 auto; \r\n}\r\n\r\n.basics__tile1__3mwX_hOuFL {\r\n    background: green;\r\n    flex: 0 10rem;\r\n}\r\n\r\n.basics__tile2__3Z4sJYVNbg {\r\n    background: red;\r\n    flex: 2 1 auto;\r\n}\r\n\r\n.basics__tile3__1O6c-s7a55 {\r\n    background: yellow;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile4__2AoZfjpsxT {\r\n    background: purple;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile5__8wJCTHu53C {\r\n    background: orange;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile6__r6Dg5CxaLB {\r\n    background: brown;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile7__2TNCYByAne {\r\n    background: slateblue;\r\n    flex: 1 1 auto;\r\n}\r\n", ""]);
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.basics__tabContent__3c_YLwQWWS {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.basics__noMargin__Z2ldqLMqbU {\r\n}\r\n\r\n.basics__demoFlexbox__3yzrx3MAa1 {\r\n    display: flex;\r\n    height: 100%;\r\n    --direction: row;\r\n    flex-direction: var(--direction);\r\n}\r\n\r\n.basics__directions__3-E25A9B1j {\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n    margin: 1rem;\r\n}\r\n\r\n.basics__tile__uLsRvlWmK4 {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.basics__tile0__3Swbl_xRxD {\r\n    background: blue;\r\n    flex: 3 1 auto; \r\n}\r\n\r\n.basics__tile1__3mwX_hOuFL {\r\n    background: green;\r\n    flex: 0 10rem;\r\n}\r\n\r\n.basics__tile2__3Z4sJYVNbg {\r\n    background: red;\r\n    flex: 2 1 auto;\r\n}\r\n\r\n.basics__tile3__1O6c-s7a55 {\r\n    background: yellow;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile4__2AoZfjpsxT {\r\n    background: purple;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile5__8wJCTHu53C {\r\n    background: orange;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile6__r6Dg5CxaLB {\r\n    background: brown;\r\n    flex: 1 1 auto;\r\n}\r\n\r\n.basics__tile7__2TNCYByAne {\r\n    background: slateblue;\r\n    flex: 1 1 auto;\r\n}\r\n", ""]);
 
 // exports
 exports.locals = {
 	"tabContent": "basics__tabContent__3c_YLwQWWS " + __webpack_require__(3).locals["tabContent"] + "",
 	"noMargin": "basics__noMargin__Z2ldqLMqbU " + __webpack_require__(3).locals["noMargin"] + "",
 	"demoFlexbox": "basics__demoFlexbox__3yzrx3MAa1",
+	"directions": "basics__directions__3-E25A9B1j",
 	"tile": "basics__tile__uLsRvlWmK4",
 	"tile0": "basics__tile0__3Swbl_xRxD",
 	"tile1": "basics__tile1__3mwX_hOuFL",
@@ -2531,12 +2543,165 @@ exports.locals = {
 
 /***/ }),
 /* 47 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Alignment; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+/*
+MIT License
+Copyright (c) 2017 Patrick Lafferty
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*/
+
+var styles = __webpack_require__(48);
+var Alignment = (function (_super) {
+    __extends(Alignment, _super);
+    function Alignment(props) {
+        var _this = _super.call(this, props) || this;
+        _this.updateAlignment = function (propertyName, value) {
+            var flex = document.querySelector("#basicFlexbox");
+            if (flex != null && flex instanceof HTMLDivElement) {
+                flex.style.setProperty(propertyName, value);
+            }
+        };
+        _this.onJustifyContentChange = function (event) {
+            _this.setState({ justifyContent: event.currentTarget.value });
+            _this.updateAlignment("--justify-content", event.currentTarget.value);
+        };
+        _this.onAlignItemsChange = function (event) {
+            _this.setState({ alignItems: event.currentTarget.value });
+            _this.updateAlignment("--align-items", event.currentTarget.value);
+        };
+        _this.state = {
+            justifyContent: "flex-start",
+            alignItems: "stretch"
+        };
+        return _this;
+    }
+    Alignment.prototype.render = function () {
+        return (__WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("section", { className: styles.tabContent },
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("p", { className: styles.noMargin }, "With flexbox you have many options on how to align flex items horizontally and vertically. This demo has 5 fixed sized coloured divs to show how the alignments behave. Note: for flex-direction: row, justify-content refers to horizontal alignment, and align items refers to vertical alignment. For flex-direction: column, swap the two."),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.alignmentConfig },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null,
+                    "Justify Content",
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("select", { className: styles.alignmentOption, value: this.state.justifyContent, onChange: this.onJustifyContentChange },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "flex-start" }, "flex-start"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "flex-end" }, "flex-end"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "center" }, "center"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "space-between" }, "space-between"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "space-around" }, "space-around"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "space-evenly" }, "space-evenly"))),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("label", null,
+                    "Align Items",
+                    __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("select", { className: styles.alignmentOption, value: this.state.alignItems, onChange: this.onAlignItemsChange },
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "flex-start" }, "flex-start"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "flex-end" }, "flex-end"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "center" }, "center"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "baseline" }, "baseline"),
+                        __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("option", { value: "stretch" }, "stretch")))),
+            __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { id: "basicFlexbox", className: styles.alignmentDemo },
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile0 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile1 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile2 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile3 }),
+                __WEBPACK_IMPORTED_MODULE_0_react__["createElement"]("div", { className: styles.tile4 }))));
+    };
+    return Alignment;
+}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]));
+
+
+
+/***/ }),
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(48);
+var content = __webpack_require__(49);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(2)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../../node_modules/css-loader/index.js??ref--3-0!./alignment.css", function() {
+			var newContent = require("!!../../../../node_modules/css-loader/index.js??ref--3-0!./alignment.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+exports.i(__webpack_require__(3), undefined);
+
+// module
+exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Lafferty\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n*/\r\n\r\n.alignment__tabContent__7BKwvXImFd {\r\n    display: flex;\r\n    flex-direction: column;\r\n}\r\n\r\n.alignment__noMargin__1iOmckoaQu {\r\n}\r\n\r\n.alignment__alignmentConfig__3M3eyFn8t9 {\r\n    display: flex;\r\n    justify-content: space-evenly;\r\n}\r\n\r\n.alignment__alignmentDemo__3_jBbjeW3K {\r\n    --justify-content: \"flex-start\";\r\n    --align-items: \"stretch\";\r\n\r\n    display: flex;\r\n    justify-content: var(--justify-content);\r\n    align-items: var(--align-items);\r\n    margin: 1rem;\r\n    border: 1px solid black;\r\n    height: 20rem;\r\n}\r\n\r\n.alignment__alignmentOption__1thD6IUiWF {\r\n    margin-left: 1rem;\r\n}\r\n\r\n.alignment__tile__3WP6-0ftgD {\r\n    flex: 0 10rem; \r\n    min-height: 10rem;\r\n}\r\n\r\n.alignment__tile0__p8MhuH-cBz { \r\n   background: blue;\r\n}\r\n\r\n.alignment__tile1__uBLRUTtDB- { \r\n    background: green;\r\n}\r\n\r\n.alignment__tile2__3LSyk1dwU2 { \r\n    background: red;\r\n}\r\n\r\n.alignment__tile3__IOtJRQI8KT { \r\n    background: yellow;\r\n}\r\n\r\n.alignment__tile4__1Xgz23vSK7 { \r\n    background: purple;\r\n}\r\n", ""]);
+
+// exports
+exports.locals = {
+	"tabContent": "alignment__tabContent__7BKwvXImFd " + __webpack_require__(3).locals["tabContent"] + "",
+	"noMargin": "alignment__noMargin__1iOmckoaQu " + __webpack_require__(3).locals["noMargin"] + "",
+	"alignmentConfig": "alignment__alignmentConfig__3M3eyFn8t9",
+	"alignmentDemo": "alignment__alignmentDemo__3_jBbjeW3K",
+	"alignmentOption": "alignment__alignmentOption__1thD6IUiWF",
+	"tile": "alignment__tile__3WP6-0ftgD",
+	"tile0": "alignment__tile0__p8MhuH-cBz alignment__tile__3WP6-0ftgD",
+	"tile1": "alignment__tile1__uBLRUTtDB- alignment__tile__3WP6-0ftgD",
+	"tile2": "alignment__tile2__3LSyk1dwU2 alignment__tile__3WP6-0ftgD",
+	"tile3": "alignment__tile3__IOtJRQI8KT alignment__tile__3WP6-0ftgD",
+	"tile4": "alignment__tile4__1Xgz23vSK7 alignment__tile__3WP6-0ftgD"
+};
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(51);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2561,7 +2726,7 @@ if(false) {
 }
 
 /***/ }),
-/* 48 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
@@ -2575,13 +2740,13 @@ exports.push([module.i, "/*\r\nMIT License\r\nCopyright (c) 2017 Patrick Laffert
 
 
 /***/ }),
-/* 49 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(50);
+var content = __webpack_require__(53);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2606,7 +2771,7 @@ if(false) {
 }
 
 /***/ }),
-/* 50 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(undefined);
