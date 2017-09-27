@@ -56,6 +56,8 @@ export class Basics extends React.Component<any, any> {
                 <div className={styles.directions}>
                     <label>Row <input value="row" id="row" checked={this.state.direction === "row"} onChange={this.onDirectionChange} name="direction" type="radio"/></label>
                     <label>Column <input value="column" id="column" checked={this.state.direction === "column"} onChange={this.onDirectionChange} name="direction" type="radio"/></label>
+                    <label>Row Reverse <input value="row-reverse" id="row-reverse" checked={this.state.direction === "row-reverse"} onChange={this.onDirectionChange} name="direction" type="radio"/></label>
+                    <label>Column Reverse <input value="column-reverse" id="column-reverse" checked={this.state.direction === "column-reverse"} onChange={this.onDirectionChange} name="direction" type="radio"/></label>
                 </div>
 
                 <div id="basicFlexbox" className={styles.demoFlexbox}>

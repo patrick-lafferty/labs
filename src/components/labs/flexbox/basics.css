@@ -35,6 +35,12 @@ SOFTWARE.
     flex-direction: var(--direction);
 }
 
+.directions {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem;
+}
+
 .tile {
     width: 100%;
     height: 100%;
